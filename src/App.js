@@ -1,10 +1,20 @@
-import React from 'react';
+import React from "react";
+import { BrowserRouter, Route, Switch } from "react-router-dom";
+import { Home } from "./pages/Home";
+import { About } from "./pages/About";
+import { Navbar } from "./components/Navbar";
 
 function App() {
   return (
-    <div className="container">
-      <h1>TEST</h1>
-    </div>
+    <BrowserRouter>
+      <Navbar />
+      <div className="container pt-4">
+        <Switch>
+          <Route path="/" exact component={Home} />
+          <Route path="/about" component={About} />
+        </Switch>
+      </div>
+    </BrowserRouter>
   );
 }
 
