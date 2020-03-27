@@ -22,3 +22,12 @@ ul li a{
   outline: none;
   opacity: .6;
 }
+
+.note{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  strong{
+    margin-right: 25px;
+  }
+}
